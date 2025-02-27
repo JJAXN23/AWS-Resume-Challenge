@@ -1,0 +1,637 @@
+/* Crimson Night Color Palette - Black Hovers */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #f0f0f0; /* Light off-white for text */
+    background-color: #222222; /* Dark charcoal background */
+    margin: 0;
+    padding: 0 40px;
+    font-size: 1.25em;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0.04em 0.04em 0.08em rgba(0,0,0,0.15);
+    /* Subtle noise texture for background - keep or adjust noise color */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)" fill="rgba(34, 34, 34, 0.06)"/></svg>'); /* Noise color to match bg */
+  }
+  
+  /* Crimson Gradient Headings */
+  h1, h2, h3, h4, h5 {
+    font-weight: bolder;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #f44336, #e53935); /* Crimson red gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.05em;
+    text-shadow: 0.08em 0.08em 0.15em rgba(0,0,0,0.25);
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    position: relative; /* For underline effect */
+    padding-bottom: 0.4em; /* Space for underline */
+  }
+  
+  h1::after, h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e53935; /* Underline color - crimson red */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+    border-radius: 2px;
+  }
+  
+  h1:hover::after, h2:hover::after {
+    transform: scaleX(1);
+  }
+  
+  
+  h1 {
+    font-size: 4em;
+    margin-bottom: 0.6em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    font-size: 3.2em;
+    margin-bottom: 0.8em;
+    text-align: center;
+    border-bottom: none; /* Removed default border */
+    padding-bottom: 0.3em;
+  }
+  
+  h3 {
+    font-size: 2.7em;
+    margin-bottom: 0.6em;
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px; /* Slightly more rounded */
+    box-shadow: 0.4em 0.4em 0.8em rgba(0,0,0,0.3);
+    background-color: #2e2e2e; /* Darker box background */
+    border: 2px solid #e53935; /* Crimson red border */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for border */
+  }
+  
+  h3:hover {
+    border-color: #333; /* Dark gray border on hover */
+    box-shadow: 0.5em 0.5em 1em rgba(0,0,0,0.4); /* Slightly enhanced shadow on hover */
+  }
+  
+  
+  h4 {
+    font-size: 2.2em;
+    margin-bottom: 0.6em;
+    text-align: left;
+    border-left: 0.4em solid #e53935; /* Crimson red border */
+    padding-left: 0.6em; /* Adjusted padding to match border */
+  }
+  
+  h5 {
+    font-size: 1.7em;
+    font-weight: normal;
+    margin-bottom: 0.6em;
+    text-align: center;
+    font-style: italic;
+    color: #e0e0e0; /* Slightly lighter italic text */
+  }
+  
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover {
+    text-shadow: 0.15em 0.15em 0.3em rgba(0,0,0,0.4);
+    color: #000; /* Black hover color for headings */
+  }
+  
+  p {
+    margin-bottom: 1.2em;
+    font-size: 1.3em;
+    text-align: justify;
+    color: #e8e8e8; /* Slightly lighter paragraph text */
+    line-height: 1.8; /* Improved line height for readability */
+  }
+  
+  a {
+    color: #e53935; /* Crimson red link color */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
+    position: relative; /* For underline animation */
+  }
+  
+  a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Underline position */
+    width: 100%;
+    height: 2px;
+    background-color: #e53935; /* Underline color - orange-red */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 1px;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #000; /* Black hover color for links */
+    text-shadow: 0 0 0.2em #000000; /* Enhanced glow effect on hover */
+  }
+  
+  a:hover::after {
+    transform: scaleX(1); /* Underline animation on hover */
+  }
+  
+  
+  /* Enhanced Header Styles - Crimson */
+  header#home {
+    background-color: #2a2a2a; /* Darker header background */
+    text-align: center;
+    padding: 500px 0;
+    position: relative;
+    background-image: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%); /* Darker gradient */
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.3); /* More pronounced header shadow */
+    border-bottom: 3px solid #e53935; /* Crimson red border-bottom */
+  }
+  
+  #nav-wrap {
+    background-color: rgba(54, 54, 54, 0.95); /* Darker nav background */
+    color: #f0f0f0; /* Lighter nav text */
+    position: fixed;
+    top: 0;
+    width: calc(100% - 80px);
+    z-index: 100;
+    backdrop-filter: blur(12px) saturate(120%); /* Enhanced blur and saturation */
+    border-bottom: 2px solid #555; /* Darker nav border */
+    box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.2); /* More pronounced nav shadow */
+    left: 40px;
+    right: 40px;
+    padding: 15px 0; /* Slightly increased padding */
+  }
+  
+  #nav {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  #nav li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+  
+  #nav a {
+    color: #f0f0f0; /* Lighter nav link text */
+    padding: 14px 18px; /* Slightly larger padding */
+    display: block;
+    border-radius: 8px; /* Slightly more rounded nav links */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out; /* Added transform transition */
+    box-shadow: inset 0 0 0 rgba(0,0,0,0.1); /* Subtle inset shadow for depth */
+    transform: translateY(0);
+  }
+  
+  #nav a:hover, #nav li.current a {
+    background-color: #e53935; /* Crimson red nav hover background */
+    border-radius: 8px;
+    color: #000; /* Black nav hover text color */
+    box-shadow: 0 0.3em 0.6em rgba(0,0,0,0.35); /* More pronounced hover shadow */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  .banner-text {
+    padding: 40px; /* Increased banner padding */
+    background-color: rgba(40, 40, 40, 0.5); /* Darker banner background */
+    border-radius: 12px;
+    box-shadow: 0 0.4em 0.8em rgba(0,0,0,0.3); /* More pronounced banner shadow */
+    border: 2px solid #e53935; /* Crimson red border */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for border and shadow */
+  }
+  
+  .banner-text:hover {
+    border-color: #333; /* Dark gray border on hover */
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.4); /* Slightly enhanced shadow on hover */
+  }
+  
+  
+  .responsive-headline {
+    font-size: 3.5em;
+    text-shadow: 0.08em 0.08em 0.2em rgba(0,0,0,0.3);
+  }
+  
+  .social {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    text-align: center;
+  }
+  
+  .social li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  .social a {
+    font-size: 2.2em;
+    color: #c0c0c0; /* Light gray social icon color */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.2s ease-in-out; /* Added transform transition */
+    transform: scale(1);
+  }
+  
+  .social a:hover {
+    color: #000; /* Black hover color for social icons */
+    text-shadow: 0 0 0.3em #e53935; /* Enhanced glow effect on hover */
+    transform: scale(1.1); /* Scale up on hover */
+  }
+  
+  
+  .scrolldown {
+    margin-top: 40px;
+  }
+  
+  .scrolldown a {
+    font-size: 2.2em;
+    color: #c0c0c0; /* Light gray scroll down color */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .scrolldown a:hover {
+    color: #000; /* Black hover color for scroll down arrow */
+    transform: scale(1.1);
+  }
+  
+  /* Enhanced About Section Styles - Crimson */
+  #about {
+    padding: 500px 0;
+    margin-top: 70px;
+    text-align: center;
+    background-color: #2a2a2a; /* Darker about section background */
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.3); /* More pronounced about section shadow */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #e53935; /* Crimson red border */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for border and shadow */
+  }
+  
+  #about:hover {
+    border-color: #333; /* Dark gray border on hover */
+    box-shadow: 0 0.6em 1.2em rgba(0,0,0,0.4); /* Slightly enhanced shadow on hover */
+  }
+  
+  
+  .profile-pic {
+    max-width: 100%;
+    border-radius: 12px; /* More rounded profile pic */
+    box-shadow: 0.3em 0.3em 0.6em rgba(0,0,0,0.3); /* More pronounced profile pic shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for shadow */
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.08); /* Slightly larger scale on hover */
+    box-shadow: 0.4em 0.4em 0.8em rgba(0,0,0,0.4); /* Enhanced shadow on hover */
+  }
+  
+  
+  .main-col {
+    padding-left: 30px;
+  }
+  
+  /* Enhanced Resume Section Styles - Crimson */
+  #resume {
+    background-color: #2e2e2e; /* Darker resume background */
+    padding: 300px 0;
+    background-image: linear-gradient(135deg, #2e2e2e 0%, #1a1a1a 100%); /* Darker gradient */
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.3); /* More pronounced resume section shadow */
+    border-top: 3px solid #e53935; /* Crimson red border-top */
+    border-bottom: 3px solid #e53935; /* Crimson red border-bottom */
+  }
+  
+  .certifications, .skills, .work, .education {
+    margin-bottom: 50px;
+    padding-top: 90px;
+    border-top: 4px dashed #555; /* Darker dashed border */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for shadow */
+    box-shadow: inset 0 0.1em 0.2em rgba(0,0,0,0.1); /* Added inset shadow for depth */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding-bottom: 20px; /* Added padding bottom */
+  }
+  
+  .certifications:hover, .skills:hover, .work:hover, .education:hover {
+    border-color: #333; /* Dark gray border on hover */
+    box-shadow: inset 0 0.2em 0.4em rgba(0,0,0,0.2); /* Enhanced inset shadow on hover */
+  }
+  
+  
+  .header-col {
+    text-align: right;
+    padding-right: 30px;
+  }
+  
+  .header-col h1 {
+    font-size: 2.2em;
+    text-shadow: 0.08em 0.08em 0.15em rgba(0,0,0,0.25);
+  }
+  
+  .main-col {
+    padding-left: 30px;
+  }
+  
+  .item {
+    margin-bottom: 35px;
+    box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.2); /* Slightly more pronounced item shadow */
+    padding: 25px; /* Slightly increased padding */
+    border-radius: 7px; /* Slightly more rounded item corners */
+    background-color: #282828; /* Darker item background */
+    border-left: 0.4em solid #e53935; /* Crimson red left border accent */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Transition for border-color */
+    transform: translateY(0);
+  }
+  
+  .item:hover {
+    box-shadow: 0.4em 0.4em 0.8em rgba(0,0,0,0.4); /* More pronounced item hover shadow */
+    transform: translateY(-7px); /* Increased lift on hover */
+    border-color: #333; /* Dark gray border on hover */
+  }
+  
+  .info {
+    font-style: normal;
+    color: #ffffff; /* White info text for contrast */
+    text-shadow: 0.04em 0.04em 0.08em rgba(0,0,0,0.15);
+  }
+  
+  .date {
+    font-weight: bold;
+    color: #d8d8d8; /* Slightly warmer date color */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle background for date */
+    padding: 4px 8px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.3); /* Inset shadow for date box */
+  }
+  
+  /* Enhanced Footer Styles - Crimson */
+  footer {
+    background-color: #363636; /* Darker footer background */
+    color: #f0f0f0; /* Lighter footer text */
+    text-align: center;
+    padding: 40px 0; /* Increased footer padding */
+    box-shadow: inset 0 0.3em 0.6em rgba(0,0,0,0.3); /* More pronounced inset footer shadow */
+    background-image: linear-gradient(to bottom, #363636 0%, #282828 100%); /* Darker gradient */
+    border-top: 2px solid #555; /* Darker footer border */
+    position: relative; /* For wave effect */
+    overflow: hidden; /* Clip wave effect */
+  }
+  
+  footer::before {
+    content: '';
+    position: absolute;
+    top: -60px; /* Wave height */
+    left: 0;
+    right: 0;
+    height: 60px; /* Wave height */
+    background: #363636; /* Match footer background */
+    border-radius: 50% / 100%; /* Wave shape */
+  }
+  
+  
+  .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0; /* Increased social links margin */
+    text-align: center;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  .social-links a {
+    color: #c0c0c0; /* Light gray social links icon color */
+    font-size: 1.9em; /* Slightly larger social links icons */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
+    text-shadow: 0.04em 0.04em 0.1em rgba(0,0,0,0.2); /* Subtler social link shadow */
+    transform: scale(1);
+  }
+  
+  .social-links a:hover {
+    color: #000; /* Black hover color for social links icons */
+    transform: scale(1.2);
+    text-shadow: 0 0 0.3em #e53935; /* Enhanced glow effect on hover */
+  }
+  
+  
+  #go-top {
+    margin-top: 30px;
+  }
+  
+  #go-top a {
+    color: #c0c0c0; /* Light gray go-top icon color */
+    font-size: 1.9em; /* Slightly larger go-top icon */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
+    text-shadow: 0.04em 0.04em 0.1em rgba(0,0,0,0.2); /* Subtler go-top shadow */
+    background-color: rgba(60, 60, 60, 0.8); /* Darker go-top button background */
+  }
+  
+  #go-top a:hover {
+    color: #000; /* Black hover color for go-top icon */
+    transform: scale(1.2);
+    text-shadow: 0 0 0.3em #e53935; /* Enhanced glow effect on hover */
+  }
+  
+  
+  /* Mobile Styles - Crimson Night adjustments */
+  @media (max-width: 768px) {
+    body {
+      padding: 0 20px;
+      font-size: 1.15em;
+    }
+  
+    h1 {
+      font-size: 3em;
+    }
+    h2 {
+      font-size: 2.5em;
+    }
+    h3 {
+      font-size: 2em;
+      padding: 30px;
+    }
+    h4 {
+      font-size: 1.8em;
+    }
+    h5 {
+      font-size: 1.4em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  
+    header#home {
+      padding: 350px 0;
+      border-bottom-width: 2px; /* Adjusted mobile header border */
+    }
+  
+    #nav-wrap {
+      display: none;
+      position: static;
+      width: auto;
+      padding: 10px;
+      backdrop-filter: none;
+      box-shadow: none;
+      background-color: #2c2c2c; /* Darker mobile nav background */
+      left: 0;
+      right: 0;
+      border-bottom-width: 1px; /* Adjusted mobile nav border */
+    }
+  
+    #nav.responsive {
+      display: block;
+    }
+  
+    #nav li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    #nav a {
+      text-align: center;
+      padding: 10px;
+    }
+  
+    #nav a:hover, #nav li.current a {
+      background-color: #e53935; /* Lightened nav hover background - crimson red */
+      border-radius: 7px;
+      color: #000; /* Black nav hover text color */
+      box-shadow: 0 0.25em 0.5em rgba(0,0,0,0.3); /* Subtler nav hover shadow */
+    }
+  
+    .banner-text {
+      padding: 15px;
+      border-width: 1px; /* Adjusted mobile banner border */
+    }
+  
+    .banner-text:hover {
+      border-color: #333; /* Dark gray border on hover */
+      box-shadow: 0 0.5em 1em rgba(0,0,0,0.4); /* Slightly enhanced shadow on hover */
+    }
+  
+  
+    .responsive-headline {
+      font-size: 2.5em;
+    }
+  
+    .social {
+      margin-top: 20px;
+    }
+  
+    .social li {
+      margin: 0 8px;
+    }
+  
+    .social a {
+      font-size: 1.8em;
+    }
+  
+    .social a:hover {
+      color: #000; /* Black hover color for social icons */
+    }
+  
+    .scrolldown {
+      margin-top: 25px;
+    }
+  
+    .scrolldown a {
+      font-size: 1.8em;
+    }
+  
+    .scrolldown a:hover {
+      color: #000; /* Black hover color for scroll down arrow */
+    }
+  
+    #about {
+      padding: 350px 0;
+      margin-top: 30px;
+      border-width: 1px; /* Adjusted mobile about border */
+    }
+  
+    #about:hover {
+      border-color: #333; /* Dark gray border on hover */
+      box-shadow: 0 0.6em 1.2em rgba(0,0,0,0.4); /* Slightly enhanced shadow on hover */
+    }
+  
+  
+    .profile-pic {
+      box-shadow: 0.2em 0.2em 0.4em rgba(0,0,0,0.3); /* Adjusted mobile profile pic shadow */
+    }
+  
+  
+    .main-col {
+      padding-left: 0;
+    }
+  
+    .header-col {
+      padding-right: 0;
+      text-align: left;
+    }
+  
+    #resume {
+      padding: 200px 0;
+      border-top-width: 2px; /* Adjusted mobile resume border */
+      border-bottom-width: 2px; /* Adjusted mobile resume border */
+    }
+  
+    .certifications, .skills, .work, .education {
+      padding-top: 60px;
+      margin-bottom: 30px;
+      border-top-width: 2px; /* Adjusted mobile section border */
+    }
+  
+    .item {
+      box-shadow: 0.15em 0.15em 0.4em rgba(0,0,0,0.15); /* Adjusted mobile item shadow */
+    }
+  
+    .item:hover {
+      box-shadow: 0.4em 0.4em 0.8em rgba(0,0,0,0.4); /* More pronounced item hover shadow */
+      border-color: #333; /* Dark gray border on hover */
+    }
+  
+    footer {
+      padding: 20px 0;
+      border-top-width: 1px; /* Adjusted mobile footer border */
+    }
+  
+    footer::before {
+      top: -30px; /* Adjusted mobile wave height */
+      height: 30px; /* Adjusted mobile wave height */
+    }
+  
+  
+    .social-links {
+      margin: 20px 0;
+    }
+  
+    .social-links li {
+      margin: 0 10px;
+    }
+  
+    .social-links a {
+      font-size: 1.8em;
+    }
+  
+    .social-links a:hover {
+      color: #000; /* Black hover color for social links icons */
+    }
+  
+    #go-top {
+      margin-top: 20px;
+    }
+  
+    #go-top a {
+      font-size: 1.8em;
+    }
+  
+    #go-top a:hover {
+      color: #000; /* Black hover color for go-top icon */
+    }
+  }
